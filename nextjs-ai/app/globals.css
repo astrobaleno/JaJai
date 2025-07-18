@@ -1,0 +1,151 @@
+:root {   /* override dei miei tre colori principali personalizzati */
+  --bs-primary: #ffe700;
+  --bs-secondary: #ededed;
+  --bs-tertiary: #08202a;
+
+  --background: var(--bs-tertiary);
+  --foreground: #2b2b2b;
+
+  --jjyellow: #ffe700;
+}
+
+/* Tema chiaro (attivato manualmente aggiungendo la classe 'light' all'elemento <html>) */
+html.light {
+  --bs-primary: #08202a;
+  --bs-secondary: #555555;
+  --bs-tertiary: #ededed;
+
+  --background: var(--bs-tertiary);
+  --foreground: #ededed;
+}
+
+/* Tema scuro (default, attivato manualmente con la classe 'dark') */
+html.dark {
+  --bs-primary: var(--jjyellow);
+  --bs-secondary: #ededed;
+  --bs-tertiary: #08202a;
+
+  --background: var(--bs-tertiary);
+  --foreground: #2b2b2b;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #08202a !important;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.text-secondary {
+  color: var(--bs-secondary) !important;
+}
+
+.text-fixed-gray {
+  color: #ededed !important;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #000 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 6px var(--bs-primary), 0 0 10px var(--bs-primary);
+}
+
+.btn-send {
+  color: var(--background) !important; /* colore della freccia */
+}
+
+.btn-sm {
+  color: var(--background) !important; /* colore della freccia */
+}
+
+/* stile per far lampeggiare il laoding della risposta */
+.blinking-cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+  font-weight: bold;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+
+/* Stile per l'interruttore quando è attivo (checked) */
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+/* Stile per l'interruttore quando è attivo e ha il focus */
+.form-check-input:checked:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.5); /* Ombra gialla */
+}
+/* Stile per l'interruttore quando non è attivo (unchecked) */
+.form-check-input {
+  background-color: #ededed; 
+  border-color: var(--bs-primary);     
+}
+/* Stile per l'interruttore quando non è attivo e ha il focus */
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.5); /* Ombra gialla */
+}
+
+
+textarea.form-control {
+  background-color: #ededed !important;
+  color: #000 !important;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+textarea.form-control:focus {
+  outline: none;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 4px var(--bs-primary);
+}
+
+.hr-divider {   /* linetta tra una risposta e l'altra */
+  border-color: var(--bs-secondary);
+  opacity: 0.2;
+  margin: 0.5rem 0;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background) !important;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

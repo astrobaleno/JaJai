@@ -1,0 +1,1 @@
+Ehm ehm, se stai leggendo questo messaggio, significa che sono riuscito ad implementare correttamente la funzione del programma di allegare, aprire e leggere il contenuto da un file!
